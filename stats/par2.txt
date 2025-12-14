@@ -1,0 +1,33 @@
+stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N1 -l
+
+N1
+1. 4m 46.984s
+2. 4m 42.983s
+
+Avg: 294.98s
+
+N2
+1. 4m 16.632s
+2. 4m 16.705s
+
+Avg: 256.67s
+
+N3
+4m 51.178s
+
+N4
+5m 2.971s
+
+N5
+5m 18.386s
+
+N6
+5m 23.329s
+
+N7
+5m 16.111s
+
+N8
+5m 18.419s
+
+Score: 169,234 mm of wire

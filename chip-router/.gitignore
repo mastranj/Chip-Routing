@@ -1,0 +1,9 @@
+.stack-work/
+*~
+assets/
+output/
+o*.txt
+debug.*
+*.cabal
+*.eventlog
+*.json
