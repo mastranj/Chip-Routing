@@ -50,7 +50,8 @@ run [connFile, pf,pfInc,pfMax, hf, maxT,maxB, optN,optNL, parType, isBatch] = do
     routingToX3D routing $ "output.par2." ++ show score++ ".x3d"
 
   else if parV == 1 then do
-    putStrLn     $ "Running in parallel " ++ parType ++ ": Slice batching"
+    putStrLn     $ "Running in parallel " ++ parType 
+                   ++ ": Slice/netlist batching"
     let routing  = parNegotiateRouteB args nl''
     let score    = scoreRouting routing
     putStrLn     $ "Score: " ++ show score

@@ -3,6 +3,50 @@
 Big thanks to Professor Edwards for advising this project and helping me
 learn about chips, routing, and Haskell!
 
+
+## To run benchmarks
+
+1. Sequential:
+
+> time stack run sample_assets/hdmi2usb.subset.txt 1 1.5 1000 1 2 400 True True 0 False
+
+2. Sequential batched:
+
+> time stack run sample_assets/hdmi2usb.subset.txt 1 1.5 1000 1 2 400 True True 0 True
+
+3. Parallel variation 1: Parallel-Netlists
+
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.55 1000 1 2 400 True True 1 False -- +RTS -N1 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.55 1000 1 2 400 True True 1 False -- +RTS -N2 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.55 1000 1 2 400 True True 1 False -- +RTS -N3 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.55 1000 1 2 400 True True 1 False -- +RTS -N4 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.55 1000 1 2 400 True True 1 False -- +RTS -N5 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.55 1000 1 2 400 True True 1 False -- +RTS -N6 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.55 1000 1 2 400 True True 1 False -- +RTS -N7 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.55 1000 1 2 400 True True 1 False -- +RTS -N8 -l
+
+3. Parallel variation 2: Sequential-Parallel Alternating
+
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N1 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N2 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N3 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N4 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N5 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N6 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N7 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.28 1000 1 2 400 True True 2 False -- +RTS -N8 -l
+
+3. Parallel variation 3: Non-overlapping Parallel Batches
+
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N1 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N2 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N3 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N4 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N5 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N6 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N7 -l
+> stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N8 -l
+
 ## How this project was generated
 This project was generated using the following commands:
 > stack new chip-router
