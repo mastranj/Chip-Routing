@@ -61,7 +61,7 @@ if not isOpt:
 plt.rcParams.update({'font.size': 20})
 plt.title(title)
 plt.grid(True)
-plt.plot(x_smooth[:smooth_sz], y_smooth[:smooth_sz], color='royalblue', label='Batch-Par Variation')
+plt.plot(x_smooth[:smooth_sz], y_smooth[:smooth_sz], color='royalblue', label='Batch-Netlists Variation')
 plt.plot(x[:sz], y[:sz],'^', color='royalblue', markersize=6)
 plt.plot(x_smooth2[:smooth_sz], y_smooth2[:smooth_sz], color='forestgreen', label='Seq-Par Variation')
 plt.plot(x[:sz], y2[:sz],'^', color='forestgreen', markersize=6)
