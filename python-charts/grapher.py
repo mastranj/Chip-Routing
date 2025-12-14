@@ -65,7 +65,7 @@ plt.plot(x_smooth[:smooth_sz], y_smooth[:smooth_sz], color='royalblue', label='B
 plt.plot(x[:sz], y[:sz],'^', color='royalblue', markersize=6)
 plt.plot(x_smooth2[:smooth_sz], y_smooth2[:smooth_sz], color='forestgreen', label='Seq-Par Variation')
 plt.plot(x[:sz], y2[:sz],'^', color='forestgreen', markersize=6)
-plt.plot(x_smooth3[:smooth_sz], y_smooth3[:smooth_sz], color='darkslateblue', label='Seq-Par Variation')
+plt.plot(x_smooth3[:smooth_sz], y_smooth3[:smooth_sz], color='darkslateblue', label='Non-overlapping Batches Variation')
 plt.plot(x[:sz], y3[:sz],'^', color='darkslateblue', markersize=6)
 if isOpt: plt.plot(xOpt, yOpt, color='peru', label='Optimal')
 plt.ylabel("Speedup")
