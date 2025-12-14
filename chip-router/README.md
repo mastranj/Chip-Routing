@@ -47,6 +47,8 @@ learn about chips, routing, and Haskell!
 > stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N7 -l
 > stack run sample_assets/hdmi2usb.subset.txt 1 1.4 12000 0.9 2 400 True True 3 False -- +RTS -N8 -l
 
+See ../stats/*.txt for benchmark results, also provided in the report.
+
 ## How this project was generated
 This project was generated using the following commands:
 > stack new chip-router
