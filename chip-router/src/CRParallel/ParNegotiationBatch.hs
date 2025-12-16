@@ -26,7 +26,8 @@ _parNegotiateRouteBOrg args i hcm ps sc =
         | otherwise = grps
   
 
-_parNegotiateRouteBWork :: NetList -> Args -> Int -> CostM -> Problems -> Int -> Routing
+_parNegotiateRouteBWork :: NetList -> Args -> Int -> CostM -> Problems -> Int 
+                        -> Routing
 _parNegotiateRouteBWork n args@(inp, pf, pfInc, pfMax, hf) i hcm ps minn
   | lofw == 0 = iter
   | otherwise = _parNegotiateRouteBOrg args' i' hcm' n min'
